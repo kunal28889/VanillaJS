@@ -1,0 +1,153 @@
+body {
+  font-family: sans-serif;
+}
+
+/* https://css-tricks.com/star-ratings/ */
+.rating {
+  text-align: left;
+  /* direction: rtl; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin: 1em 0;
+}
+.rating > span {
+  /* background: red; */
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+}
+.rating > span:hover::before,
+.rating > span:hover ~ span::before {
+  /* background: red; */
+  /* background-image: url("https://www.google.com/favicon.ico"); */
+  position: absolute;
+  content: "\2605";
+}
+
+.reviewWidget {
+  /* width: 500px; */
+}
+.reviewContent {
+  /* display: block; */
+  /* height: 450px; */
+  display: flex;
+  flex-direction: column;
+}
+.reviewContent > button {
+  align-self: flex-end;
+}
+.reviewContent input {
+  /* width: 100px; */
+  /* margin: 0 0 20px 50px; */
+  /* float:right; */
+  display: block;
+}
+.reviewContent textarea {
+  /* width: 100px; */
+  /* height: 300px; */
+  /* float: right; */
+}
+
+.reviewList {
+  width: 100%;
+  background: blue;
+  color: white;
+}
+
+#progress {
+  width: 50%;
+  height: 50px;
+  border: 2px solid black;
+}
+#progress #overlay {
+  background: green;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* Divs with circle */
+.square {
+  float: left;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background-color: red;
+  margin: 0 20px;
+}
+.circle {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.comment {
+  width: 200px;
+  background: blue;
+}
+
+.comment,
+.comment textarea {
+  display: block;
+}
+
+.comment textarea {
+  width: 100%;
+}
+.comment button {
+  float: right;
+}
+.list {
+  clear: both;
+  width: 200px;
+}
+.listcomment {
+  background: red;
+}
+
+#dragTarget {
+  height: 100px;
+  width: 100px;
+  background: red;
+}
+
+.parent {
+  display: flex;
+  /* flex-shrink: 0; */
+  flex-wrap: wrap;
+  height: 100px;
+  width: 100%;
+}
+.child {
+  flex: 0 1;
+  overflow: auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+  min-width: 25%;
+  height: 100%;
+  background: red;
+}
+@media screen and (max-width: 720px) {
+  .child {
+    min-width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .child {
+    min-width: 100%;
+  }
+}
+.labels.highcharts-data-label text {
+  border: none;
+  color: red;
+}

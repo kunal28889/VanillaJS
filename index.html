@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <script src="https://code.highcharts.com/6.1.3/highcharts.js"></script>
+    <script src="https://code.highcharts.com/6.1.3/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/6.1.3/modules/treemap.src.js"></script>
+    <script src="https://code.highcharts.com/6.1.3/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/6.1.3/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/6.1.3/modules/accessibility.js"></script>
+    <script>
+      let urls = [
+        "https://code.highcharts.com/6.1.3/highcharts.js",
+        "https://code.highcharts.com/6.1.3/modules/accessibility.js",
+        "https://code.highcharts.com/6.1.3/modules/exporting.js",
+        "https://code.highcharts.com/6.1.3/modules/heatmap.js",
+        "https://code.highcharts.com/6.1.3/modules/treemap.js"
+      ];
+      urls.forEach((url) => {
+        let script = document.createElement("script");
+        script.src = url;
+        // document.head.appendChild(script);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <!-- <div id="lists">
+      <select id="list1" multiple> </select>
+      <button id="send">>></button>
+      <button id="sendOne">></button>
+      <button id="receive"><<</button>
+      <button id="receiveOne"><</button>
+      <select id="list2" multiple></select>
+    </div> -->
+    <!-- <div class="reviewWidget">
+      <div class="rating">
+        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+      </div>
+      <div class="reviewContent">
+        <input type="search" results="5" />
+        <textarea></textarea>
+        <button>Add Comment</button>
+      </div>
+      <div class="reviewList">
+        <div>Title1</div>
+        <div>Descr1</div>
+      </div>
+    </div> -->
+    <!-- <div id="progress"><div id="overlay"></div></div> -->
+    <!-- <div class="dragndrop">
+      <span id="dragItem" draggable="true">Drag this text over</span>
+      <div id="dragTarget">Add some text here</div>
+    </div> -->
+    <!-- <div class="parent">
+      <div class="child">
+        <div>
+          orem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ips
+        </div>
+      </div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div> -->
+    <div id="container"></div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
